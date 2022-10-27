@@ -1,6 +1,6 @@
 # Abstract
 
-_**Sign-In with Cardano**_ allows Cardano account owners to authenticate with off-chain services by signing a standard message format, which contains:
+_**Sign-In with Wallet**_ allows Cardano account owners to authenticate with off-chain services by signing a standard message format, which contains:
 
 * a scope (metadata to be shared)
 * session details (where to connect to, how long)

@@ -5,13 +5,13 @@
 Note as per the code below, that we have preferred to use callback functions rather than be constrained to wait for async calls to succeed (or fail). This is not usual, but since the user may take a very long time before accepting requests from the wallet, we have favored this option.
 
 ```
-import siwc_connect from "./siwc_connect";
+const SIWW = require('@incubiq/siww');
 
-// instanciate SIWC lib
-this.siwc=new siwc_connect();
+// instanciate the cardano connector
+this.siww=SIWW.getConnector("cardano");
 
-// register all callbacks with SIWC
-this.siwc.async_initialize({
+// register all callbacks with SIWW
+this.siww.async_initialize({
     onNotifyAccessibleWallets: function(_aWallet){
         this.onSIWCNotify_WalletsAccessible(_aWallet);
     }.bind(this),
